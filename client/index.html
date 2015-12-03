@@ -1,0 +1,127 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <base href="/">
+    <title>Help Desk Sys</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css" />
+    <link rel="stylesheet" href="bower_components/toastr/toastr.css" />
+
+    <!-- Vendor CSS -->
+    <link href="assets/ma/vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/ma/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+    <link href="assets/ma/vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet">
+    <link href="assets/ma/vendors/bower_components/angular-loading-bar/src/loading-bar.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="assets/ma/css/app.css" rel="stylesheet" id="app-level">
+    <!--link href="assets/ma/css/app.min.1.css" rel="stylesheet" id="app-level"-->
+    <!-- <link href="assets/ma/css/app.min.2.css" rel="stylesheet"> -->
+    <link href="assets/ma/css/demo.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="bower_components/ngModal/dist/ng-modal.css" />
+
+    <!--script src="vendors/sparklines/jquery.sparkline.min.js" async=""></script -->
+
+      <!-- build:css({.tmp,client}) app/app.css 
+    <link rel="stylesheet" href="app/app.css">-->
+
+  </head>
+  <body ng-app="incidentSystemApp">
+    <!-- Add your site or application content here -->
+    <div ui-view></div>
+<!-- <div ng-view=""></div> -->
+      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+   
+
+      <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+      <![endif]-->
+      <!-- build:js({client,node_modules}) app/vendor.js -->
+      <!-- bower:js -->
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/accounting/accounting.js"></script>
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-resource/angular-resource.js"></script>
+      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+      <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+      <script src="bower_components/angular-route/angular-route.js"></script>
+      <script src="bower_components/lodash/lodash.js"></script>
+      <script src="bower_components/moment/moment.js"></script>
+      <script src="bower_components/toastr/toastr.js"></script>
+      <script src="bower_components/angular-socket-io/socket.js"></script>
+      <script src="bower_components/angular-modal-service/dst/angular-modal-service.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/angular-validation-match/dist/angular-validation-match.min.js"></script>
+      <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="bower_components/ngModal/dist/ng-modal.js"></script>
+      <script src="bower_components/auth0.js/build/auth0.js"></script>
+      <script src="bower_components/auth0-lock/build/auth0-lock.js"></script>
+      <script src="bower_components/auth0-angular/build/auth0-angular.js"></script>
+      <script src="bower_components/angular-jwt/dist/angular-jwt.js"></script>
+      <script src="bower_components/a0-angular-storage/dist/angular-storage.js"></script>
+      <!-- endbower -->
+      <script src="socket.io-client/socket.io.js"></script>
+      <!-- endbuild -->
+      <!-- build:js(.tmp) app/app.js -->
+      <script src="app/settings.js"></script>
+      <script src="app/app.js"></script>
+      <!-- injector:js -->
+      <script src="app/core/app.config.js"></script>
+      <script src="app/core/app.constants.js"></script>
+      <script src="app/core/app.controller.js"></script>
+      <script src="app/core/app.run.js"></script>
+      <script src="app/core/context.service.js"></script>
+      <script src="app/core/logger.service.js"></script>
+      <script src="app/dashboard/dashboard.controller.js"></script>
+      <script src="app/dashboard/dashboard.js"></script>
+      <script src="app/enroll/enroll.controller.js"></script>
+      <script src="app/enroll/enroll.js"></script>
+      <script src="app/generictype/generictype.service.js"></script>
+      <script src="app/i18n/i18n.service.js"></script>
+      <script src="app/i18n/localize.filter.js"></script>
+      <script src="app/i18n/resources.js"></script>
+      <script src="app/login/login.controller.js"></script>
+      <script src="app/login/login.js"></script>
+      <script src="app/project/project.service.js"></script>
+      <script src="app/request/incidentitemnew.controller.js"></script>
+      <script src="app/request/request.controller.js"></script>
+      <script src="app/request/request.js"></script>
+      <script src="app/request/request.service.js"></script>
+      <script src="app/request/requestitemactions.controller.js"></script>
+      <script src="app/request/requestitemdetails.controller.js"></script>
+      <script src="app/request/requestitemedit.controller.js"></script>
+      <script src="app/request/requestitemview.controller.js"></script>
+      <script src="app/request/requestlist.controller.js"></script>
+      <script src="app/settings.js"></script>
+      <script src="app/signup/signup.controller.js"></script>
+      <script src="app/signup/signup.js"></script>
+      <script src="app/tenant/tenant.service.js"></script>
+      <script src="app/util/currency-input.directive.js"></script>
+      <script src="app/util/format-currency.filter.js"></script>
+      <script src="app/util/format-date.filter.js"></script>
+      <script src="app/util/format-number.filter.js"></script>
+      <script src="app/util/numeric-input.directive.js"></script>
+      <script src="app/util/utils.service.js"></script>
+      <script src="components/footer/footer.directive.js"></script>
+      <script src="components/layout/footer.directive.js"></script>
+      <script src="components/layout/header.directive.js"></script>
+      <script src="components/layout/loading-interceptor.service.js"></script>
+      <script src="components/layout/nav-menu.directive.js"></script>
+      <script src="components/layout/page-loader.directive.js"></script>
+      <script src="components/layout/user-menu.directive.js"></script>
+      <script src="components/navbar/navbar.controller.js"></script>
+      <script src="components/navbar/navbar.directive.js"></script>
+      <script src="components/socket/socket.service.js"></script>
+      <!-- endinjector -->
+    <!-- endbuild -->
+  </body>
+</html>

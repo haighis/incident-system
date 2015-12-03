@@ -1,0 +1,26 @@
+<div class="login-content">
+    <div class="lc-block" id="l-login">
+        <div class="input-group m-b-20">
+            <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+            <div class="fg-line">
+                <a href="" ng-click="vm.doGoogleAuthWithPopup()">Login with Google</a><br/>
+            </div>
+        </div>
+
+        <div class="input-group m-b-20">
+            <span class="input-group-addon"><i class="zmdi zmdi-male"></i></span>
+            <div class="fg-line">
+                
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        
+        <a href="" class="btn btn-login btn-danger btn-float" ng-click="vm.doGoogleAuthWithPopup()"><i class="zmdi zmdi-arrow-forward"></i></a>
+
+        <ul class="login-navigation">
+            <li data-block="#l-register" class="bgm-red" data-ng-click="lctrl.login = 0; lctrl.register = 1">Register</li>
+            <li data-block="#l-forget-password" class="bgm-orange" data-ng-click="lctrl.login = 0; lctrl.forgot = 1">Forgot Password?</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+'use strict';
+
+angular.module('incidentSystemApp')
+  .directive('navMenu', function($location, i18n, $timeout, auth) {
+    return {
+      templateUrl: 'components/layout/nav-menu.html',
+      restrict: 'EA',
+      link: function(scope, element, attrs) {
+        scope.language = i18n.getLanguage();
+        scope.currentPage = setActiveItem();
+        
+        if(auth && auth.profilePromise) {
+          auth.profilePromise.then(function() {
+            scope.fullname = auth.profile.name;
+            scope.profilePicture = auth.profile.picture;
+          });
+        }
+        
+        function setActiveItem() {
+          var parts = $location.path().split('/');
+          var page = parts.length >= 3 ? parts[2] : '';
+
+          $timeout(function() {
+            element.find('a').removeClass('active');
+            element.find('a[href*="' + page + '"]').addClass('active');
+          });
+
+          return page;
+        }
+
+        scope.$on('$stateChangeSuccess', function(angularEvent, current, previous) {
+          //setActiveItem();
+        });
+      }
+    };
+  });
